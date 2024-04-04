@@ -10,7 +10,7 @@ const answer = await inquirer.prompt([
         message: "Select one of the operators to perform operations",
         type: "list",
         name: "operator",
-        choices: ["Addition", "Subtraction", "Multiplication", "Division"],
+        choices: ["Addition", "Subtraction", "Multiplication", "Division", "Modulas", "Exponentiation"],
     },
 ]);
 if (answer.operator === "Addition") {
@@ -25,7 +25,13 @@ else if (answer.operator === "Multiplication") {
 else if (answer.operator === "Division") {
     console.log(chalk.green.bold.bgRedBright(answer.firstNumber / answer.SecondNumber));
 }
+else if (answer.operator === "Modulas") {
+    console.log(chalk.redBright.bold.bgYellowBright(answer.firstNumber % answer.SecondNumber));
+}
+else if (answer.operator === "Exponentiation") {
+    console.log(chalk.redBright.bold.bgMagentaBright(answer.firstNumber ** answer.SecondNumber));
+}
 else {
-    console.log(chalk.redBright.strikethrough.bgBlueBright("Please Select invalid operator"));
+    console.log(chalk.redBright.strikethrough.bgBlueBright("Please Select valid operator"));
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
