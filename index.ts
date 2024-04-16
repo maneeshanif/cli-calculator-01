@@ -1,14 +1,22 @@
 #! /usr/bin/env node
 ///////////////////////////////////////////////////////////////////////////// CLI CALCULATOR /////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////    Using Inquirer, Chalk and Nested if else             /////////////////////////////////////////////////////////////
+console.log(
+  chalk.blackBright.bold.overline.bgWhiteBright(
+    "\t\t\t\t\t\t CLI Calculator"
+  )
+);
+console.log(chalk.cyanBright("\nDeveloped By:"));
+console.log(chalk.yellowBright.underline("\tAnees Hanif"));
+console.log("\n");
 
 import inquirer from "inquirer";
 import chalk from "chalk";
 const answer = await inquirer.prompt([
-  { message: "Enter First number", type: "number", name: "firstNumber" },
-  { message: "Enter Second number", type: "number", name: "SecondNumber" },
+  { message: chalk.redBright.bold.italic("\tEnter First number"), type: "number", name: "firstNumber" },
+  { message: chalk.blueBright.bold.italic("\tEnter Second number"), type: "number", name: "SecondNumber" },
   {
-    message: "Select one of the operators to perform operations",
+    message: chalk.greenBright.bold.italic.underline("\t\tSelect one of the operators to perform operations"),
     type: "list",
     name: "operator",
     choices: [" ( + )  Addition", " ( - )  Subtraction", " ( * )  Multiplication", " ( / )  Division"," ( % )  Modulas"," ( ** )  Exponentiation"],
