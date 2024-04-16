@@ -10,25 +10,25 @@ const answer = await inquirer.prompt([
         message: "Select one of the operators to perform operations",
         type: "list",
         name: "operator",
-        choices: ["Addition", "Subtraction", "Multiplication", "Division", "Modulas", "Exponentiation"],
+        choices: [" ( + )  Addition", " ( - )  Subtraction", " ( * )  Multiplication", " ( / )  Division", " ( % )  Modulas", " ( ** )  Exponentiation"],
     },
 ]);
-if (answer.operator === "Addition") {
+if (answer.operator === " ( + )  Addition") {
     console.log(chalk.redBright.bold.bgBlueBright(answer.firstNumber + answer.SecondNumber));
 }
-else if (answer.operator === "Subtraction") {
-    console.log(chalk.blueBright.bold.bgGreen(answer.firstNumber - answer.SecondNumber));
+else if (answer.operator === " ( - )  Subtraction") {
+    console.log(chalk.blueBright.bold.bgGreen(`\t\t\t${answer.firstNumber} - ${answer.SecondNumber}`));
 }
-else if (answer.operator === "Multiplication") {
+else if (answer.operator === " ( * )  Multiplication") {
     console.log(chalk.redBright.bold.bgWhite(answer.firstNumber * answer.SecondNumber));
 }
-else if (answer.operator === "Division") {
+else if (answer.operator === " ( / )  Division") {
     console.log(chalk.green.bold.bgRedBright(answer.firstNumber / answer.SecondNumber));
 }
-else if (answer.operator === "Modulas") {
+else if (answer.operator === " ( % )  Modulas") {
     console.log(chalk.redBright.bold.bgYellowBright(answer.firstNumber % answer.SecondNumber));
 }
-else if (answer.operator === "Exponentiation") {
+else if (answer.operator === " ( ** )  Exponentiation") {
     console.log(chalk.redBright.bold.bgMagentaBright(answer.firstNumber ** answer.SecondNumber));
 }
 else {

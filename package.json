@@ -1,6 +1,6 @@
 {
   "name": "anees-hanif-cli-calculator-01",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "This is a simple cli calculator using inquirer, chalk and nested else-if ",
   "main": "index.js",
   "type": "module",
